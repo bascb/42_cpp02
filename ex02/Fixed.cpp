@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:30:22 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/02 19:07:56 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/03/02 19:26:54 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,32 +45,32 @@ Fixed& Fixed::operator=( const Fixed& src)
 
 bool Fixed::operator<( const Fixed& second) 
 {
-	return (this->value < second.getRawBits());
+	return (this->value < second.value);
 }
 
 bool Fixed::operator>( const Fixed& second) 
 {
-	return (this->value > second.getRawBits());
+	return (this->value > second.value);
 }
 
 bool Fixed::operator>=( const Fixed& second) 
 {
-	return (this->value >= second.getRawBits());
+	return (this->value >= second.value);
 }
 
 bool Fixed::operator<=( const Fixed& second) 
 {
-	return (this->value <= second.getRawBits());
+	return (this->value <= second.value);
 }
 
 bool Fixed::operator==( const Fixed& second) 
 {
-	return (this->value == second.getRawBits());
+	return (this->value == second.value);
 }
 
 bool Fixed::operator!=( const Fixed& second) 
 {
-	return (this->value != second.getRawBits());
+	return (this->value != second.value);
 }
 
 float Fixed::operator+( const Fixed& second) 
