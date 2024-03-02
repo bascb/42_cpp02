@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:30:22 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/02/25 15:49:58 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/03/02 19:07:56 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,82 @@ Fixed& Fixed::operator=( const Fixed& src)
 	return (*this);
 }
 
+bool Fixed::operator<( const Fixed& second) 
+{
+	return (this->value < second.getRawBits());
+}
+
+bool Fixed::operator>( const Fixed& second) 
+{
+	return (this->value > second.getRawBits());
+}
+
+bool Fixed::operator>=( const Fixed& second) 
+{
+	return (this->value >= second.getRawBits());
+}
+
+bool Fixed::operator<=( const Fixed& second) 
+{
+	return (this->value <= second.getRawBits());
+}
+
+bool Fixed::operator==( const Fixed& second) 
+{
+	return (this->value == second.getRawBits());
+}
+
+bool Fixed::operator!=( const Fixed& second) 
+{
+	return (this->value != second.getRawBits());
+}
+
+float Fixed::operator+( const Fixed& second) 
+{
+	return (this->toFloat() + second.toFloat());
+}
+
+float Fixed::operator-( const Fixed& second) 
+{
+	return (this->toFloat() - second.toFloat());
+}
+
+float Fixed::operator*( const Fixed& second) 
+{
+	return (this->toFloat() * second.toFloat());
+}
+
+float Fixed::operator/( const Fixed& second) 
+{
+	return (this->toFloat() / second.toFloat());
+}
+
+Fixed Fixed::operator++( int ) 
+{
+	Fixed	temp(*this);
+	value++;
+	return (temp);
+}
+
+Fixed& Fixed::operator++( void ) 
+{
+	value++;
+	return (*this);
+}
+
+Fixed Fixed::operator--( int ) 
+{
+	Fixed	temp(*this);
+	value++;
+	return (temp);
+}
+
+Fixed& Fixed::operator--( void ) 
+{
+	value++;
+	return (*this);
+}
+
 Fixed::~Fixed( void )
 {
 	std::cout << "Destructor called" << std::endl;
@@ -66,6 +142,34 @@ float	Fixed::toFloat( void ) const
 int		Fixed::toInt( void ) const
 {
 	return (value >> fract);
+}
+
+Fixed&	Fixed::min( Fixed& a, Fixed& b )
+{
+	if (a.value <= b.value)
+		return (a);
+	return (b);
+}
+
+Fixed&	Fixed::max( Fixed& a, Fixed& b )
+{
+	if (a.value >= b.value)
+		return (a);
+	return (b);
+}
+
+const Fixed&	Fixed::min( const Fixed& a, const Fixed& b )
+{
+	if (a.value <= b.value)
+		return (a);
+	return (b);
+}
+
+const Fixed&	Fixed::max( const Fixed& a, const Fixed& b )
+{
+	if (a.value >= b.value)
+		return (a);
+	return (b);
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &item)
