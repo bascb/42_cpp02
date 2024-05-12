@@ -6,13 +6,13 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 12:26:11 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 16:01:17 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:08:53 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-Point::Point( void )
+Point::Point( void ) : x(0) , y(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
