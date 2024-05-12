@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:30:22 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 14:57:32 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 15:29:29 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ Fixed& Fixed::operator=( const Fixed& src)
 	if (this != &src )
 		this->value = src.getRawBits();
 	return (*this);
+}
+
+Fixed::~Fixed( void )
+{
+	std::cout << "Destructor called" << std::endl;
 }
 
 bool Fixed::operator<( const Fixed& second) 
@@ -116,11 +121,6 @@ Fixed& Fixed::operator--( void )
 {
 	value++;
 	return (*this);
-}
-
-Fixed::~Fixed( void )
-{
-	std::cout << "Destructor called" << std::endl;
 }
 
 int	Fixed::getRawBits( void ) const
