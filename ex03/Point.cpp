@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 12:26:11 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 15:59:24 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 16:01:17 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Point::Point( const Point& src) : x(src.x) , y(src.y)
 	std::cout << "Point Copy constructor called" << std::endl;
 }
 
-Point& Point::operator=( const Point& src)
+Point& Point::operator=( const Point&)
 {
 	std::cout << "Point Copy assignment operator called" << std::endl;
 	return (*this);
