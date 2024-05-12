@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:30:22 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 14:03:27 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 14:57:32 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,22 +72,22 @@ bool Fixed::operator!=( const Fixed& second)
 	return (this->value != second.value);
 }
 
-float Fixed::operator+( const Fixed& second) 
+Fixed Fixed::operator+( const Fixed& second) 
 {
 	return (this->toFloat() + second.toFloat());
 }
 
-float Fixed::operator-( const Fixed& second) 
+Fixed Fixed::operator-( const Fixed& second) 
 {
 	return (this->toFloat() - second.toFloat());
 }
 
-float Fixed::operator*( const Fixed& second) 
+Fixed Fixed::operator*( const Fixed& second) 
 {
 	return (this->toFloat() * second.toFloat());
 }
 
-float Fixed::operator/( const Fixed& second) 
+Fixed Fixed::operator/( const Fixed& second) 
 {
 	return (this->toFloat() / second.toFloat());
 }
