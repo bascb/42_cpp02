@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:12:35 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/02 19:07:28 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 12:05:34 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 
 class Fixed
 {
-	private:
-		int					value;
-		static const int	fract = 8;
 	public:
 		Fixed();
 		Fixed( const Fixed& );
@@ -50,6 +47,9 @@ class Fixed
 		static Fixed&	max( Fixed&, Fixed& );
 		static const Fixed&	min( const Fixed&, const Fixed& );
 		static const Fixed&	max( const Fixed&, const Fixed& );
+	private:
+		int					value;
+		static const int	fract = 8;
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &item);

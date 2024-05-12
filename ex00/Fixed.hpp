@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:12:35 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/02/24 22:51:42 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 12:05:51 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 
 class Fixed
 {
-	private:
-		int					value;
-		static const int	fract = 8;
 	public:
 		Fixed();
 		Fixed( const Fixed& );
@@ -27,6 +24,9 @@ class Fixed
 		~Fixed();
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
+	private:
+		int					value;
+		static const int	fract = 8;
 };
 
 #endif
