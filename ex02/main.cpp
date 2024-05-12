@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:10:26 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 14:25:38 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 15:04:24 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	calc( void )
 	Fixed	a(0.5f);
 	Fixed	b(2);
 	Fixed	c(3.5f);
-	float	res;
+	Fixed	res;
 
 	res = a + c;
 	std::cout << "4? " << res << std::endl;
