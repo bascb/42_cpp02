@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:12:35 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/05/12 12:05:39 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 14:02:39 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ class Fixed
 {
 	public:
 		Fixed();
-		Fixed( const Fixed& );
 		Fixed( const int );
 		Fixed( const float );
+		Fixed( const Fixed& );
 		Fixed&	operator=( const Fixed& );
 		bool	operator<( const Fixed& );
 		bool	operator>( const Fixed& );
