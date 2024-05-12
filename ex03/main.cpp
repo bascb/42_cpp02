@@ -6,7 +6,7 @@
 /*   By: bcastelo <bcastelo@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 18:10:26 by bcastelo          #+#    #+#             */
-/*   Updated: 2024/03/03 17:16:13 by bcastelo         ###   ########.fr       */
+/*   Updated: 2024/05/12 15:49:55 by bcastelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int	main( void )
 	Point	C(4,0);
 	Point	P1(2,2);
 	Point	P2(2,3);
+	Point	copy;
 	bool	inside;
 	
+	copy = test;
 	Fixed x = test.getX();
 	Fixed y = test.getY();
 	Fixed xf = testf.getX();
